@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About-Us</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/stylesheet.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-black">
+
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="fixed top-0 left-0 backdrop-blur-sm right-0 z-50 border-b border-white/10">
+            <div class="container mx-auto px-6">
+                <div class="flex items-center justify-between h-20">
+                    <!-- Logo -->
+                    <a href="/" class="w-52">
+                        <img src="/images/image 1.png" alt="">
+                    </a>
+
+                    <!-- Desktop Navigation -->
+                    <div class="hidden lg:flex items-center lg:gap-8 gap-[0.7rem]">
+                        <a href="../index.html"
+                            class="text-white hover:text-[#FFB800] transition-colors PlayfairDisplay">Home</a>
+                        <a href="../pages/aboutUs.html" class="text-[#FFB800] PlayfairDisplay">About Us</a>
+                        <a href="../pages/Gallery.html"
+                            class="text-white hover:text-[#FFB800] transition-colors PlayfairDisplay">Gallery</a>
+                        <a href="../pages/products.html"
+                            class="text-white hover:text-[#FFB800] transition-colors PlayfairDisplay">Products</a>
+                        <a href="../pages/blog.html"
+                            class="text-white hover:text-[#FFB800] transition-colors PlayfairDisplay">Blog</a>
+                        <a href="../pages/contactUs.html"
+                            class="text-white hover:text-[#FFB800] transition-colors PlayfairDisplay">Contact Us</a>
+                    </div>
+
+                    <!-- Book Now Button -->
+                    <button
+                        class="hidden lg:flex items-center gap-2 px-6 py-2 bg-transparent border border-[#FFB800] text-[#FFFFFF] rounded hover:bg-[#FFB800] hover:text-black transition-colors Outfit">
+                        Book Now
+                        <div>
+                            <i class="fa-solid fa-angles-right"></i>
+                        </div>
+                    </button>
+
+                    <!-- mobile  -->
+                    <button class="lg:hidden text-white ham-burger">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+
+                    <!-- Header and Other Content -->
+                    <div id="offcanvas-menu"
+                        class="fixed z-30 h-screen top-0 right-0  w-[100%]  bg-[#0e0e0f] shadow-lg transform translate-x-full transition-transform duration-300">
+                        <div class="p-6 relative h-screen">
+                            <!-- Close Button -->
+                            <div class="flex items-center justify-between mb-6">
+                                <img src="/images/image 1.png" alt="logo" class="w-52" />
+                                <button id="close-menu" type="button"
+                                    class="bg-primary border border-white/10 text-white text-xl lg:text-3xl font-medium rounded-lg px-3 lg:px-3 py-3 lg:py-3 shadow-inner-button">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M2.37865 14.8501C2.03851 14.8699 1.70399 14.7568 1.44562 14.5347C0.936095 14.0222 0.936095 13.1944 1.44562 12.6818L12.6026 1.52477C13.1326 1.02888 13.9642 1.05644 14.4601 1.5864C14.9085 2.06563 14.9346 2.80223 14.5212 3.31202L3.29851 14.5347C3.0435 14.7536 2.71432 14.8665 2.37865 14.8501Z"
+                                            fill="white" />
+                                        <path
+                                            d="M13.5228 14.8502C13.1781 14.8487 12.8477 14.7118 12.6029 14.4691L1.44587 3.312C0.973822 2.76076 1.038 1.93116 1.58925 1.45907C2.08125 1.03773 2.80685 1.03773 3.29881 1.45907L14.5215 12.6161C15.0514 13.1121 15.0788 13.9438 14.5827 14.4736C14.563 14.4947 14.5426 14.515 14.5215 14.5348C14.3856 14.653 14.2268 14.742 14.055 14.7963C13.8832 14.8505 13.702 14.8689 13.5228 14.8502Z"
+                                            fill="white" />
+                                    </svg>
+
+                                </button>
+
+                            </div>
+                            <!-- Navigation Links -->
+                            <ul class="relative mt-32 space-y-9 font-medium text-center">
+                                <li>
+                                    <a href="../index.html" data-page="home"
+                                        class="nav-link   text-white font-semibold text-[24px] PlayfairDisplay">HOME</a>
+                                </li>
+                                <li>
+                                    <a href="../pages/aboutUs.html" data-page="about"
+                                        class="nav-link hover:text-[#FFB800] text-[#FFB800] font-semibold text-[24px] PlayfairDisplay">About
+                                        Us</a>
+                                </li>
+                                <li>
+                                    <a href="../pages/Gallery.html" data-page="gallery"
+                                        class="nav-link hover:text-[#FFB800] text-white font-semibold text-[24px] PlayfairDisplay">Gallery</a>
+                                </li>
+                                <li>
+                                    <a href="../pages/products.html" data-page="products"
+                                        class="nav-link hover:text-[#FFB800] text-white font-semibold text-[24px] PlayfairDisplay">Product</a>
+                                </li>
+                                <li>
+                                    <a href="../pages/blog.html" data-page="blog"
+                                        class="nav-link hover:text-[#FFB800] text-white font-semibold text-[24px] PlayfairDisplay">Blog</a>
+                                </li>
+                                <li>
+                                    <a href="../pages/contactUs.html" data-page="contact"
+                                        class="nav-link hover:text-[#FFB800] text-white font-semibold text-[24px] PlayfairDisplay">Contact
+                                        Us</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen">
+        <!-- Background Image -->
+        <div class="absolute inset-0">
+            <img src="/images/about-banner-img.png" alt="Spices in wooden bowls" class="w-full h-full object-cover" />
+            <!-- <div class="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent"></div> -->
+        </div>
+
+        <!-- Content -->
+        <div class="container mx-auto px-6 ">`
+            <div>
+                <h1
+                    class="absolute top-[45%]  text-[#AB7A18] text-5xl 2xl:text-[64px] xl:text-[55px] lg:text-[53px] md:text-[48px] font-bold mb-4 PlayfairDisplay min-h-screen">
+                    About Us
+                </h1>
+                <div class="absolute left-0 top-[820px] hidden 2xl:block">
+                    <h2
+                        class="text-[80px] bg-gradient-to-r from-[rgba(171,122,23,1)] to-[rgba(242,242,242,0.3)] bg-clip-text text-transparent opacity-20 PlayfairDisplay">
+                        Arvish Global
+                    </h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- We With The Aspects Food Professional Services  -->
+    <section>
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-[50px] relative">
+            <!-- // mobile and tablet  -->
+            <h1
+                class="2xl:text-[35px]  text-3xl md:text-4xl lg:text-2xl font-bold PlayfairDisplay text-center mb-9 2xl:hidden xl:hidden lg:hidden md:block block">
+                <div class="text-[#FFB800] 2xl:pb-3 xl:pb-3 lg:pb-0 md:pb-3 pb-3">We With The Aspects Food</div>
+                <span class="text-white ">Professional Services</span>
+            </h1>
+
+            <div class="absolute left-[100%] w-[181px] bottom-[34%]  hidden 2xl:block">
+                <img src="/images/about-sec-2-icon.png" alt="">
+            </div>
+
+            <!-- Mobile Layout (1 Column) -->
+            <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
+                <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-6 lg:gap-8">
+                    <!-- Left Image -->
+                    <div class="relative aspect-square rounded-lg overflow-hidden">
+                        <img src="/images/Rectangle 14.png" alt="Colorful spices in spoons"
+                            class="object-cover w-full h-full" />
+                    </div>
+
+                    <!-- Center Image -->
+                    <div
+                        class="relative aspect-square rounded-lg overflow-hidden 2xl:mt-24 xl:mt-14 lg:mt-9 md:mt-5 mt-5 ">
+                        <img src="/images/Rectangle 17.png" alt="Spices in black ceramic bowls"
+                            class="object-cover w-full h-full" />
+                    </div>
+                </div>
+
+                <!-- Right Content -->
+                <div class=" 2xl:pt-24 xl:pt-14 lg:pt-9 md:pt-0 pt-0">
+                    <h1
+                        class="2xl:text-[35px] text-3xl md:text-4xl lg:text-2xl font-bold PlayfairDisplay hidden 2xl:block xl:block lg:block ">
+                        <div class="text-[#FFB800] 2xl:pb-3 xl:pb-3 lg:pb-0 md:pb-3 pb-3">We With The Aspects Food</div>
+                        <span class="text-white ">Professional Services</span>
+                    </h1>
+
+                    <p
+                        class="text-[#7F7F7F] leading-relaxed Outfit 2xl:text-[19px] xl:text-[16px] lg:text-[14px] md:text-[18px] text-[16px]  2xl:mt-6 xl:mt-3 lg:mt-3 md:mt-3 mt-0">
+                        We, Arvish Global, are a Manufacturer, Supplier and Exporter of Agricultural Products. Our
+                        company
+                        is specialized in exporting Grain, Oil Seeds, Pluses, Flours, Spices, Vegetables and Feed. We
+                        believe in delivering quality products to our valued customers. We are proud of our skilled
+                        workforce, our knowledge of the market in India, and our commitment to providing the very best
+                        in
+                        customer service.
+                    </p>
+
+                    <div class=" mt-5">
+                        <div
+                            class="flex items-center 2xl:gap-14 xl:gap-14 lg:gap-5 md:gap-20 gap-14  bg-[#0D0D0D] 2xl:p-[15px] xl:p-[15px]  lg:p-[10px]  md:p-[15px] p-[15px]   rounded-[5px]">
+                            <div>
+                                <span
+                                    class="2xl:text-4xl xl:text-4xl lg:text-2xl md:text-4xl text-4xl  font-bold text-white 2xl:pl-6 xl:pl-3 lg:pl-3 md:pl-8 pl-3">4.9</span>
+                            </div>
+                            <div>
+                                <p class="text-md text-white Outfit">
+                                    Rating based on 2000+ reviews
+                                </p>
+                                <div class="star flex gap-2 pt-1">
+                                    <div>
+                                        <i class="fa-solid fa-star text-[#FF9C07]"></i>
+                                    </div>
+                                    <div>
+                                        <i class="fa-solid fa-star text-[#FF9C07]"></i>
+                                    </div>
+                                    <div>
+                                        <i class="fa-solid fa-star text-[#FF9C07]"></i>
+                                    </div>
+                                    <div>
+                                        <i class="fa-solid fa-star text-[#FF9C07]"></i>
+                                    </div>
+                                    <div>
+                                        <i class="fa-solid fa-star text-[#FF9C07]"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- mission section  -->
+    <section>
+        <div class="2xl:py-[50px] xl:py-[50px] lg:py-[35px] md:py-[25px] py-[25px]">
+            <div
+                class=" bg-[url('/images/mission-sec-bg-img.png')] 2xl:h-[312px] xl:h-[350px] lg:h-[312px] md:h-[370px] h-[650px]  2xl:pt-11 xl:pt-8 lg:pt-6 md:pt-11 pt-11 w-[100%] relative bg-contain">
+
+                <!-- bg image overlay -->
+                <div class="absolute inset-0 bg-[#000000] bg-opacity-90"></div>
+
+                <div class="container mx-auto px-6 ">
+
+                    <div class="grid md:grid-cols-2 2xl:gap-48  xl:gap-40  lg:gap-7  gap-5  mx-auto relative">
+
+                        <!-- Mission Card -->
+                        <div class=" border-[0.5px] border-opacity-[50%] rounded-2xl p-6 relative overflow-hidden">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div>
+                                    <img src="/images/mission-icon-1.png" alt="">
+                                </div>
+                                <h2 class="text-[#AB7A18] text-[25px] font-semibold PlayfairDisplay">Our Mission</h2>
+                            </div>
+                            <p
+                                class="text-[#7F7F7F] leading-relaxed 2xl:text-[18px] xl:text-[18px] xl:text-[18px] lg:text-[16px] md:text-[16px] text-[16px]">
+                                Our major focus is "Quality". We at, Arvish Global is determined to provide premium
+                                quality
+                                Agricultural Products to our Clients.
+
+                            <p
+                                class="text-[#7F7F7F] leading-relaxed 2xl:text-[18px] xl:text-[18px] xl:text-[18px] lg:text-[16px] md:text-[16px] text-[16px] pt-3">
+                                We are proud of our skilled workforce, our knowledge of the market in India.</p>
+                            </p>
+                        </div>
+
+                        <!-- center Image  -->
+                        <div class="absolute left-[45.5%] opacity-10 2xl:top-8 xl:top-20 hidden 2xl:block xl:block">
+                            <img src="/images/about-sec-mission-icon-1.png" alt="" class="2xl:w-[142px] xl:w-[125px]">
+                        </div>
+
+                        <!-- Vision Card -->
+                        <div class="border rounded-2xl p-6 relative overflow-hidden">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div>
+                                    <img src="/images/mission-icon-2.png" alt="">
+                                </div>
+                                <h2 class="text-[#AB7A18] font-semibold PlayfairDisplay text-[25px]">Our Vision</h2>
+                            </div>
+                            <p
+                                class="text-[#7F7F7F] leading-relaxed 2xl:text-[18px] xl:text-[18px] xl:text-[18px] lg:text-[16px] md:text-[16px] text-[16px]">
+                                Our Vision is to increase our export of standard Indian Agricultural Products. So, that
+                                our
+                                Indian
+                                exotic fruits, vegetable, and other agricultural products are displayed on your plates
+                                without
+                                comprising the quality and taste standard.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why We are the best?  -->
+    <section>
+        <div class="container mx-auto px-6 2xl:py-[50px] xl:py-[50px] lg:py-[50px] md:py-[50px] py-[25px] relative ">
+            <div class=" grid md:grid-cols-2 gap-8 items-center ">
+
+                <!-- Left Content -->
+                <div
+                    class=" bg-[#0D0D0D] p-8 rounded-[8px] 2xl:w-[840px] xl:w-[840px] lg:w-[650px] md:w-[500px] w-[380px] z-10 shadow-lg 2xl:block xl:block lg:block md:block hidden">
+                    <div
+                        class="absolute opacity-10 w-[193px] 2xl:left-[44%] xl:left-[53%] lg:left-[48%] md:left-[44%] left-[44%]">
+                        <img src="/images/the-best-icon-1.png" alt="">
+                    </div>
+                    <div
+                        class="absolute opacity-10 w-[70px] 2xl:left-[31%] xl:left-[37.3%] lg:left-[46.9%] md:left-[59%] left-[31%] 2xl:top-[66%] xl:top-[66%] lg:top-[66%] md:top-[65%]">
+                        <img src="/images/the-best-icon-1.png" alt="">
+                    </div>
+                    <h2
+                        class="text-3xl 2xl:text-5xl xl:text-5xl lg:text-5xl xl:text-4xl font-bold PlayfairDisplay pb-11">
+                        <span class="text-[#AB7A18]">Why We are</span>
+                        <span class="text-white"> the best?</span>
+                    </h2>
+
+                    <div class="space-y-6">
+                        <!-- Feature Items -->
+                        <div class="flex items-start gap-3">
+                            <svg class="w-6 h-6 text-[#FFB800] mt-1 flex-shrink-0" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor">
+                                <path d="M20 6L9 17l-5-5" strokeWidth="2" strokeLinecap="round"
+                                    strokeLinejoin="round" />
+                            </svg>
+                            <p class="text-[#7F7F7F] Outfit">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            </p>
+                        </div>
+
+                        <div class="flex items-start gap-3">
+                            <svg class="w-6 h-6 text-[#FFB800] mt-1 flex-shrink-0" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor">
+                                <path d="M20 6L9 17l-5-5" strokeWidth="2" strokeLinecap="round"
+                                    strokeLinejoin="round" />
+                            </svg>
+                            <p class="text-[#7F7F7F] Outfit">Lorem ipsum dolor sit amet, consectetur elit.</p>
+                        </div>
+
+                        <div class="flex items-start gap-3">
+                            <svg class="w-6 h-6 text-[#FFB800] mt-1 flex-shrink-0" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor">
+                                <path d="M20 6L9 17l-5-5" strokeWidth="2" strokeLinecap="round"
+                                    strokeLinejoin="round" />
+                            </svg>
+                            <p class="text-[#7F7F7F] Outfit">Lorem ipsum dolor sit, consectetur adipiscing elit.</p>
+                        </div>
+
+                        <div class="flex items-start gap-3">
+                            <svg class="w-6 h-6 text-[#FFB800] mt-1 flex-shrink-0" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor">
+                                <path d="M20 6L9 17l-5-5" strokeWidth="2" strokeLinecap="round"
+                                    strokeLinejoin="round" />
+                            </svg>
+                            <p class="text-[#7F7F7F] Outfit">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Image -->
+                <div class="relative h-[400px] rounded-2xl overflow-hidden">
+                    <img src="/images/Rectangle 19492.png" alt="Various spices in silver spoons"
+                        class="w-full h-full object-cover" />
+                </div>
+
+                <!-- // Mobile view  -->
+                <div
+                    class="space-y-8 bg-[#0D0D0D] p-8 rounded-[8px] z-10 shadow-lg mt-[-100px] m-3 2xl:hidden xl:hidden lg:hidden md:hidden block">
+
+                    <h2 class="text-3xl 2xl:text-5xl xl:text-5xl lg:text-5xl xl:text-4xl font-bold PlayfairDisplay">
+                        <span class="text-[#AB7A18] text-[22px]">Why We are</span>
+                        <span class="text-white text-[22px]"> the best?</span>
+                    </h2>
+
+                    <div class="space-y-3">
+                        <!-- Feature Items -->
+                        <div class="flex items-start gap-2">
+                            <svg class="w-6 h-6 text-[#FFB800] mt-1 flex-shrink-0" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor">
+                                <path d="M20 6L9 17l-5-5" strokeWidth="2" strokeLinecap="round"
+                                    strokeLinejoin="round" />
+                            </svg>
+                            <p class="text-[#7F7F7F] Outfit text-[14px]">Lorem ipsum dolor sit amet, consectetur
+                                adipiscing
+                                elit.</p>
+                        </div>
+
+                        <div class="flex items-start gap-3">
+                            <svg class="w-6 h-6 text-[#FFB800] mt-1 flex-shrink-0" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor">
+                                <path d="M20 6L9 17l-5-5" strokeWidth="2" strokeLinecap="round"
+                                    strokeLinejoin="round" />
+                            </svg>
+                            <p class="text-[#7F7F7F] Outfit text-[14px]">Lorem ipsum dolor sit amet, consectetur elit.
+                            </p>
+                        </div>
+
+                        <div class="flex items-start gap-3">
+                            <svg class="w-6 h-6 text-[#FFB800] mt-1 flex-shrink-0" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor">
+                                <path d="M20 6L9 17l-5-5" strokeWidth="2" strokeLinecap="round"
+                                    strokeLinejoin="round" />
+                            </svg>
+                            <p class="text-[#7F7F7F] Outfit text-[14px]">Lorem ipsum dolor sit, consectetur adipiscing
+                                elit.
+                            </p>
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Best Quality Products  -->
+    <section>
+        <div class="container mx-auto px-6 2xl:py-[80px] xl:py-[50px] lg:py-[50px] md:py-[50px] py-[25px] relative">
+
+            <!-- Right side image  -->
+            <div class="absolute left-[97%] w-[220px] bottom-[32%]  hidden 2xl:block">
+                <img src="/images/sec-8-img.png" alt="">
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6  mx-auto">
+
+                <!-- Best Quality Products Card -->
+                <div class="group">
+                    <div
+                        class="p-6 space-y-4 group-hover:bg-[#19191980] duration-200 border rounded-2xl group-hover:border-[#ffffff1a]">
+                        <div class="w-12 h-12 text-white ">
+                            <!-- <img src="./images/Vector.png" alt="" class="group-hover:text-[#AB7A18] duration-200"> -->
+                            <svg width="50" height="50" viewBox="0 0 53 60" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M44.7509 38.6955L52.4512 52.0271L44.0445 50.3688C43.8032 50.3212 43.5528 50.3626 43.3396 50.4854C43.1265 50.6082 42.9651 50.8041 42.8853 51.0368L40.1214 59.144L32.5823 46.0926C37.3538 44.8757 41.5648 42.2539 44.7509 38.6955ZM8.35269 38.6917C11.5834 42.3129 15.8198 44.8894 20.5212 46.0926L12.9821 59.144L10.2183 51.0368C10.1386 50.8056 9.97839 50.6109 9.76692 50.4883C9.55544 50.3656 9.30686 50.3232 9.06668 50.3688L0.652344 52.0271L8.35269 38.6917Z"
+                                    fill="white" class="group-hover:fill-[#AB7A18] duration-200" />
+                                <path
+                                    d="M26.5517 0.0478545C23.6118 0.0463398 20.7003 0.62442 17.984 1.74903C15.2676 2.87365 12.7996 4.52273 10.721 6.60196C8.64253 8.68119 6.99429 11.1498 5.87061 13.8665C4.74693 16.5833 4.16985 19.4949 4.17237 22.4349C4.17237 34.8031 14.1798 44.8104 26.5517 44.8104C38.9237 44.8104 48.9311 34.8031 48.9311 22.4311C48.9326 19.4917 48.3548 16.5809 47.2307 13.8651C46.1065 11.1492 44.4582 8.6815 42.3797 6.60309C40.3013 4.52467 37.8336 2.87627 35.1178 1.75214C32.4019 0.628006 29.4911 0.0463408 26.5517 0.0478545ZM26.5517 4.11683C36.6513 4.11683 44.8622 12.3316 44.8622 22.4349C44.8581 27.2895 42.9275 31.9441 39.4944 35.3765C36.0613 38.8088 31.4064 40.7384 26.5517 40.7415C21.6971 40.7374 17.0426 38.8069 13.6102 35.3738C10.1778 31.9407 8.24824 27.2857 8.24519 22.4311C8.24925 17.5768 10.1792 12.9224 13.6113 9.48951C17.0435 6.05663 21.6974 4.12575 26.5517 4.12067V4.11683ZM26.5517 6.15132C24.4131 6.14981 22.2952 6.56999 20.3191 7.38783C18.343 8.20566 16.5476 9.40511 15.0355 10.9175C13.5234 12.43 12.3244 14.2257 11.507 16.202C10.6897 18.1782 10.27 20.2963 10.272 22.4349C10.271 24.5725 10.6915 26.6894 11.5094 28.6644C12.3273 30.6393 13.5266 32.4336 15.0387 33.9446C16.5507 35.4556 18.3459 36.6536 20.3214 37.4702C22.297 38.2867 24.4141 38.7057 26.5517 38.7031C28.689 38.7057 30.8058 38.2866 32.7809 37.47C34.756 36.6534 36.5507 35.4552 38.0621 33.9442C39.5736 32.4331 40.7721 30.6387 41.5892 28.6638C42.4063 26.6889 42.8258 24.5722 42.8238 22.4349C42.8269 20.2966 42.4081 18.1788 41.5916 16.2025C40.775 14.2263 39.5768 12.4305 38.0653 10.918C36.5538 9.40547 34.7589 8.2059 32.7833 7.38797C30.8076 6.57004 28.69 6.1498 26.5517 6.15132ZM26.5517 11.1032C27.2734 11.1032 27.3963 11.418 27.5882 11.6137C28.7628 13.0302 29.6918 14.7998 30.7512 16.4197C32.5938 16.8804 34.4939 17.2259 36.2904 17.936C36.5361 18.055 36.9315 18.1586 37.0965 18.769C37.2578 19.3832 37.0313 20.0242 36.4708 20.6307C35.492 21.8821 34.3788 23.1834 33.3423 24.4003C33.3884 25.0951 33.7454 28.5499 33.611 30.1391C33.5727 30.4078 33.6533 30.7341 33.0736 31.1602C32.4863 31.5824 32.1984 31.4059 31.9297 31.3636C30.1486 30.903 28.3598 30.0201 26.5517 29.3368C25.6535 29.6938 22.7783 30.9759 21.1776 31.3636C20.9089 31.4059 20.6172 31.5824 20.0337 31.1602C19.4502 30.7379 19.5347 30.4078 19.4925 30.1391C19.3658 28.2965 19.6498 26.4501 19.765 24.4003C19.3159 23.8629 16.9858 21.2833 16.1682 19.9091C16.0415 19.6672 15.7843 19.4561 16.0108 18.769C16.2334 18.0819 16.5674 18.055 16.8131 17.936C18.4982 17.2719 20.4828 16.888 22.3523 16.4197C22.9089 15.5445 24.4059 12.8997 25.5153 11.6137C25.7072 11.4218 25.8301 11.1032 26.5517 11.1032ZM26.5517 13.5714C26.2113 14.0616 25.8862 14.5621 25.5767 15.0724C25.1161 15.8247 24.594 16.7076 24.0566 17.4984C23.9223 17.6903 23.8724 17.8285 23.5461 18.0627C23.2236 18.3007 23.0931 18.3007 22.8666 18.3698C21.3696 18.7767 19.8725 19.0799 18.3601 19.529C19.2122 20.6115 20.3562 21.9013 21.3158 23.1182C21.4617 23.3101 21.5692 23.3869 21.6958 23.7708C21.8187 24.1546 21.7765 24.2851 21.7726 24.5193C21.7035 26.074 21.5346 27.5864 21.4847 29.1679C22.9434 28.619 24.3407 28.0163 25.8147 27.4559C26.0412 27.3791 26.1487 27.3023 26.5517 27.3023C28.1256 27.6363 29.9298 28.5844 31.6188 29.1679C31.5497 27.6094 31.4038 26.097 31.327 24.5231C31.327 24.2851 31.2887 24.1546 31.4115 23.7708C31.5343 23.3869 31.6456 23.3101 31.7877 23.1182C32.755 21.9052 33.7915 20.7881 34.7434 19.529C33.2464 19.1068 31.7608 18.7767 30.2407 18.3736C30.0104 18.3007 29.8799 18.3007 29.5574 18.0665C29.2311 17.8285 29.1812 17.6942 29.0469 17.4984C28.1947 16.2009 27.4462 14.8766 26.5517 13.5714Z"
+                                    fill="white" class="group-hover:fill-[#AB7A18] duration-200" />
+                            </svg>
+                        </div>
+                        <h3
+                            class="text-[23px] text-white font-semibold PlayfairDisplay group-hover:text-[#AB7A18] duration-200">
+                            Best
+                            Quality Products</h3>
+                        <p class="text-[#7F7F7F] text-xl leading-relaxed Outfit">
+                            Agriculture Was The Key Development In The Rise Of Sedentary Human Civilization, Whereby
+                            Farming
+                            Domesticated
+                            Species.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Specifically Farming Card -->
+                <div class="group">
+                    <div
+                        class="p-6 space-y-4 group-hover:bg-[#19191980] duration-200 border rounded-2xl group-hover:border-[#ffffff1a]">
+                        <div class="w-12 h-12 text-[#FFB800]">
+                            <!-- <img src="./images/Home.png" alt=""> -->
+                            <svg width="65" height="50" viewBox="0 0 66 54" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M16.5938 39.168V39.0312H12.0217L10.0312 43.543H16.5938V39.168ZM31.9062 31.375H34.0938V33.5625H31.9062V31.375Z"
+                                    fill="#ffffff" class="group-hover:fill-[#AB7A18] duration-200" />
+                                <path
+                                    d="M16.8729 33.5626H18.1876L22.1297 27.4977C22.2281 27.3466 22.3622 27.222 22.5202 27.1351L32.4733 21.6664C32.6347 21.5777 32.8159 21.5312 33.0001 21.5312C33.1843 21.5312 33.3655 21.5777 33.5269 21.6664L43.48 27.1351C43.638 27.222 43.7722 27.3466 43.8705 27.4977L47.8124 33.5626H49.1271C49.1759 33.5625 49.2238 33.5495 49.2658 33.5247C49.3078 33.4999 49.3425 33.4643 49.3661 33.4216C49.3898 33.3789 49.4015 33.3307 49.4003 33.2819C49.399 33.2331 49.3847 33.1856 49.3588 33.1442L45.3406 26.715L33 19.5164L20.6593 26.715L16.6412 33.1442C16.6153 33.1856 16.601 33.2331 16.5997 33.2819C16.5984 33.3307 16.6102 33.3789 16.6339 33.4216C16.6575 33.4643 16.6921 33.4999 16.7342 33.5247C16.7762 33.5495 16.8241 33.5625 16.8729 33.5626Z"
+                                    fill="#ffffff" class="group-hover:fill-[#AB7A18] duration-200" />
+                                <path
+                                    d="M46.125 44.5001V34.9805L42.1857 28.9202L33 23.873L23.8143 28.9202L19.875 34.9805V44.5001H26.4375V39.0313C26.4375 38.7412 26.5527 38.463 26.7579 38.2579C26.963 38.0528 27.2412 37.9376 27.5312 37.9376H38.4688C38.7588 37.9376 39.037 38.0528 39.2421 38.2579C39.4473 38.463 39.5625 38.7412 39.5625 39.0313V44.5001H46.125ZM36.2812 34.6563C36.2812 34.9464 36.166 35.2246 35.9609 35.4297C35.7558 35.6348 35.4776 35.7501 35.1875 35.7501H30.8125C30.5224 35.7501 30.2442 35.6348 30.0391 35.4297C29.834 35.2246 29.7188 34.9464 29.7188 34.6563V30.2813C29.7188 29.9912 29.834 29.713 30.0391 29.5079C30.2442 29.3028 30.5224 29.1876 30.8125 29.1876H35.1875C35.4776 29.1876 35.7558 29.3028 35.9609 29.5079C36.166 29.713 36.2812 29.9912 36.2812 30.2813V34.6563Z"
+                                    fill="#ffffff" class="group-hover:fill-[#AB7A18] duration-200" />
+                                <path
+                                    d="M28.625 49.1353L31.5763 45.5938L28.625 42.0522V49.1353ZM36.1336 40.125H29.8664L33 43.8853L36.1336 40.125ZM37.375 42.0522L34.4237 45.5938L37.375 49.1353V42.0522Z"
+                                    fill="#ffffff" class="group-hover:fill-[#AB7A18] duration-200" />
+                                <path
+                                    d="M46.1252 14.1404C48.084 14.1404 49.6719 12.5525 49.6719 10.5937C49.6719 8.635 48.084 7.04712 46.1252 7.04712C44.1665 7.04712 42.5786 8.635 42.5786 10.5937C42.5786 12.5525 44.1665 14.1404 46.1252 14.1404Z"
+                                    fill="#ffffff" class="group-hover:fill-[#AB7A18] duration-200" />
+                                <path
+                                    d="M46.125 5.125C46.4151 5.125 46.6933 5.00977 46.8984 4.80465C47.1035 4.59953 47.2188 4.32133 47.2188 4.03125V1.84375C47.2188 1.55367 47.1035 1.27547 46.8984 1.07035C46.6933 0.865234 46.4151 0.75 46.125 0.75C45.8349 0.75 45.5567 0.865234 45.3516 1.07035C45.1465 1.27547 45.0312 1.55367 45.0312 1.84375V4.03125C45.0312 4.32133 45.1465 4.59953 45.3516 4.80465C45.5567 5.00977 45.8349 5.125 46.125 5.125ZM40.7109 6.7268C40.8125 6.82838 40.9331 6.90896 41.0658 6.96394C41.1986 7.01892 41.3408 7.04721 41.4845 7.04721C41.6282 7.04721 41.7704 7.01892 41.9031 6.96394C42.0359 6.90896 42.1565 6.82838 42.258 6.7268C42.3596 6.62521 42.4402 6.50461 42.4952 6.37189C42.5502 6.23916 42.5785 6.0969 42.5785 5.95324C42.5785 5.80958 42.5502 5.66732 42.4952 5.5346C42.4402 5.40187 42.3596 5.28127 42.258 5.17969L40.7109 3.63312C40.5047 3.43389 40.2284 3.32365 39.9416 3.32614C39.6548 3.32863 39.3805 3.44366 39.1777 3.64645C38.9749 3.84924 38.8599 4.12356 38.8574 4.41034C38.8549 4.69712 38.9651 4.9734 39.1644 5.17969L40.7109 6.7268ZM37.375 11.6875H39.5625C39.8526 11.6875 40.1308 11.5723 40.3359 11.3671C40.541 11.162 40.6562 10.8838 40.6562 10.5938C40.6562 10.3037 40.541 10.0255 40.3359 9.82035C40.1308 9.61523 39.8526 9.5 39.5625 9.5H37.375C37.0849 9.5 36.8067 9.61523 36.6016 9.82035C36.3965 10.0255 36.2812 10.3037 36.2812 10.5938C36.2812 10.8838 36.3965 11.162 36.6016 11.3671C36.8067 11.5723 37.0849 11.6875 37.375 11.6875ZM40.7109 14.4607L39.1644 16.0078C38.9651 16.2141 38.8549 16.4904 38.8574 16.7772C38.8599 17.0639 38.9749 17.3383 39.1777 17.5411C39.3805 17.7438 39.6548 17.8589 39.9416 17.8614C40.2284 17.8639 40.5047 17.7536 40.7109 17.5544L42.258 16.0078C42.4632 15.8027 42.5785 15.5244 42.5785 15.2343C42.5785 14.9441 42.4632 14.6659 42.258 14.4607C42.0529 14.2555 41.7746 14.1403 41.4845 14.1403C41.1944 14.1403 40.9161 14.2555 40.7109 14.4607ZM45.0312 17.1562V19.3438C45.0312 19.6338 45.1465 19.912 45.3516 20.1171C45.5567 20.3223 45.8349 20.4375 46.125 20.4375C46.4151 20.4375 46.6933 20.3223 46.8984 20.1171C47.1035 19.912 47.2188 19.6338 47.2188 19.3438V17.1562C47.2188 16.8662 47.1035 16.588 46.8984 16.3829C46.6933 16.1777 46.4151 16.0625 46.125 16.0625C45.8349 16.0625 45.5567 16.1777 45.3516 16.3829C45.1465 16.588 45.0312 16.8662 45.0312 17.1562ZM51.5938 10.5938C51.5938 10.8838 51.709 11.162 51.9141 11.3671C52.1192 11.5723 52.3974 11.6875 52.6875 11.6875H54.875C55.1651 11.6875 55.4433 11.5723 55.6484 11.3671C55.8535 11.162 55.9688 10.8838 55.9688 10.5938C55.9688 10.3037 55.8535 10.0255 55.6484 9.82035C55.4433 9.61523 55.1651 9.5 54.875 9.5H52.6875C52.3974 9.5 52.1192 9.61523 51.9141 9.82035C51.709 10.0255 51.5938 10.3037 51.5938 10.5938ZM50.7654 7.04713C50.909 7.04729 51.0513 7.01907 51.1841 6.9641C51.3168 6.90913 51.4374 6.82849 51.5389 6.7268L53.0856 5.17969C53.2849 4.9734 53.3951 4.69712 53.3926 4.41034C53.3901 4.12356 53.2751 3.84924 53.0723 3.64645C52.8695 3.44366 52.5952 3.32863 52.3084 3.32614C52.0216 3.32365 51.7453 3.43389 51.5391 3.63312L49.992 5.17969C49.8389 5.33264 49.7347 5.52755 49.6925 5.73974C49.6502 5.95194 49.6719 6.17189 49.7547 6.37178C49.8375 6.57167 49.9777 6.74252 50.1576 6.8627C50.3375 6.98289 50.549 7.04716 50.7654 7.04713ZM4.5625 40.2617H6.75V43.543H4.5625V40.2617ZM64.7188 51.0625H62.1666L62.5312 48.875V46.6875C62.8212 46.6878 63.0992 46.8032 63.3043 47.0082C63.5093 47.2133 63.6247 47.4913 63.625 47.7812C63.625 48.0713 63.7402 48.3495 63.9454 48.5546C64.1505 48.7598 64.4287 48.875 64.7188 48.875C65.0088 48.875 65.287 48.7598 65.4921 48.5546C65.6973 48.3495 65.8125 48.0713 65.8125 47.7812C65.8115 46.9113 65.4655 46.0773 64.8503 45.4622C64.2352 44.847 63.4012 44.501 62.5312 44.5H61.9745C61.8211 44.2971 61.6404 44.1164 61.4375 43.963V38.8934C62.3766 38.6506 63.2085 38.1027 63.8024 37.3357C64.3964 36.5688 64.7187 35.6263 64.7188 34.6562V30.2812C64.7188 29.1209 64.2578 28.0081 63.4373 27.1877C62.6169 26.3672 61.5041 25.9062 60.3438 25.9062C59.1834 25.9062 58.0706 26.3672 57.2502 27.1877C56.4297 28.0081 55.9688 29.1209 55.9688 30.2812V34.6562C55.9688 35.6263 56.2911 36.5688 56.8851 37.3357C57.479 38.1027 58.3109 38.6506 59.25 38.8934V43.4062H57.0625L53.7812 42.3125L50.5 44.5L51.5938 46.6875H53.7812V51.0625H46.125V46.6875H39.5625V51.0625H36.1336L33 47.3027L29.8664 51.0625H26.4375V46.6875H19.875V51.0625H15.8023C16.2777 50.9079 16.7016 50.6257 17.0276 50.2467C17.3536 49.8676 17.5692 49.4063 17.6508 48.9131C17.7325 48.4198 17.6771 47.9137 17.4907 47.4498C17.3043 46.9859 16.994 46.5821 16.5938 46.2825V44.6367H3.93236V46.9572C3.55727 47.0942 3.22906 47.3354 2.98631 47.6525C2.74355 47.9696 2.59633 48.3493 2.56193 48.7472C2.52754 49.145 2.60741 49.5444 2.79215 49.8984C2.97689 50.2525 3.25883 50.5464 3.60485 50.7458C3.95087 50.9451 4.34659 51.0415 4.74552 51.0237C5.14445 51.006 5.53002 50.8747 5.85693 50.6454C6.18384 50.416 6.43851 50.0982 6.59101 49.7291C6.74352 49.36 6.78753 48.9551 6.71787 48.5619H12.2237C12.244 49.1209 12.4351 49.6603 12.7713 50.1074C13.1075 50.5545 13.5726 50.8878 14.104 51.0625H1.28125C0.991169 51.0625 0.71297 51.1777 0.507852 51.3829C0.302734 51.588 0.1875 51.8662 0.1875 52.1562C0.1875 52.4463 0.302734 52.7245 0.507852 52.9296C0.71297 53.1348 0.991169 53.25 1.28125 53.25H64.7188C65.0088 53.25 65.287 53.1348 65.4921 52.9296C65.6973 52.7245 65.8125 52.4463 65.8125 52.1562C65.8125 51.8662 65.6973 51.588 65.4921 51.3829C65.287 51.1777 65.0088 51.0625 64.7188 51.0625ZM57.0625 48.875H59.25L59.9791 51.0625H56.3334L57.0625 48.875ZM53.9687 16.0625H53.7812C53.5966 16.0627 53.4122 16.0784 53.2301 16.1095C53.1887 16.0433 53.1403 15.9817 53.0856 15.9258L51.5391 14.3789C51.3339 14.1738 51.0557 14.0585 50.7656 14.0585C50.4755 14.0585 50.1973 14.1737 49.9921 14.3788C49.7869 14.5839 49.6717 14.8622 49.6716 15.1523C49.6716 15.4424 49.7868 15.7206 49.992 15.9258L51.2834 17.2172C50.877 17.6942 50.6157 18.2776 50.5304 18.8984C50.4452 19.5191 50.5395 20.1514 50.8023 20.7202C51.065 21.2891 51.4852 21.7708 52.0131 22.1084C52.5411 22.4459 53.1546 22.6252 53.7812 22.625H61.4375C62.2829 22.6225 63.0947 22.2938 63.7037 21.7075C64.3126 21.1212 64.6718 20.3224 64.7063 19.4777C64.7409 18.6331 64.448 17.8077 63.8889 17.1736C63.3298 16.5395 62.5475 16.1457 61.7052 16.0743C61.1448 15.4406 60.3608 15.0487 59.5177 14.9805C59.139 14.5532 58.6553 14.2321 58.1145 14.049C57.5737 13.8658 56.9945 13.827 56.4341 13.9363C55.8737 14.0455 55.3515 14.2992 54.9191 14.6721C54.4867 15.045 54.1591 15.5242 53.9687 16.0625Z"
+                                    fill="#ffffff" class="group-hover:fill-[#AB7A18] duration-200" />
+                            </svg>
+                        </div>
+                        <h3
+                            class="text-[23px] text-white font-semibold PlayfairDisplay group-hover:text-[#AB7A18] duration-200">
+                            Specifically Farming</h3>
+                        <p class="text-[#7F7F7F] text-xl leading-relaxed Outfit">
+                            Agriculture Was The Key Development In The Rise Of Sedentary Human Civilization, Whereby
+                            Farming
+                            Domesticated
+                            Species.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Organic Farm Important Card -->
+                <div class="group">
+                    <div
+                        class="p-6 space-y-4 group-hover:bg-[#19191980] duration-200 border rounded-2xl group-hover:border-[#ffffff1a]">
+                        <div class="w-12 h-12 text-white">
+                            <!-- <img src="./images/seed.png" alt=""> -->
+                            <svg width="55" height="53" viewBox="0 0 60 60" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_40_44052)">
+                                    <path
+                                        d="M50.5455 29.3636C55.2728 29.3636 59.091 25.5454 59.091 20.8181V19.8181C59.091 19.4545 58.8183 19.0909 58.3637 19.0909H57.3637C54.3637 19.0909 51.7274 20.6363 50.1819 23V20.0909L50.6365 19.6363C54.0001 16.3636 54.0001 10.909 50.6365 7.63632L49.9092 6.90905C49.6365 6.63632 49.1819 6.63632 48.9092 6.90905L48.1819 7.63632C46.5455 9.27268 45.7274 11.3636 45.7274 13.6363C45.7274 15.909 46.6365 18 48.1819 19.6363L48.6365 20.0909V23C47.091 20.6363 44.4546 19.0909 41.4546 19.0909H40.4546C40.091 19.0909 39.7274 19.3636 39.7274 19.8181V20.909C39.7274 25.6363 43.5455 29.4545 48.2728 29.4545H48.5455V33.2727C47.0001 30.909 44.3637 29.3636 41.3637 29.3636H40.3637C40.0001 29.3636 39.6365 29.6363 39.6365 30.0909V30.909C39.6365 35.6363 43.4546 39.4545 48.1819 39.4545H48.4546V43.2727C46.9092 40.909 44.2728 39.3636 41.2728 39.3636H40.2728C39.9092 39.3636 39.5455 39.6363 39.5455 40.0909V41.0909C39.5455 45.8181 43.3637 49.6363 48.091 49.6363H48.3637V53.5454C42.2728 51.3636 36.1819 50.2727 30.091 50.1818V43.8181H30.3637C35.091 43.8181 38.9092 40 38.9092 35.2727V34.2727C38.9092 33.909 38.6365 33.5454 38.1819 33.5454H37.1819C34.1819 33.5454 31.5455 35.0909 30.0001 37.4545V33.6363H30.2728C35.0001 33.6363 38.8183 29.8181 38.8183 25.0909V24.0909C38.8183 23.7272 38.5455 23.3636 38.091 23.3636H37.091C34.091 23.3636 31.4546 24.909 29.9092 27.2727V23.4545H30.1819C34.9092 23.4545 38.7274 19.6363 38.7274 14.909V13.909C38.7274 13.5454 38.4546 13.1818 38.0001 13.1818H37.0001C34.0001 13.1818 31.3637 14.7272 29.8183 17.0909V14.1818L30.2728 13.7272C33.6365 10.4545 33.6365 4.99996 30.2728 1.72723L29.5455 0.999956C29.2728 0.727228 28.8183 0.727228 28.5455 0.999956L28.8183 1.81814C25.4546 5.18177 25.4546 10.5454 28.8183 13.8181L29.2728 14.2727V17.2727C27.7274 14.909 25.091 13.3636 22.091 13.3636H21.091C20.7274 13.3636 20.3637 13.6363 20.3637 14.0909V15.0909C20.3637 19.8181 24.1819 23.6363 28.9092 23.6363H29.1819V27.4545C27.6365 25.0909 25.0001 23.5454 22.0001 23.5454H21.0001C20.6365 23.5454 20.2728 23.8181 20.2728 24.2727V25.2727C20.2728 30 24.091 33.8181 28.8183 33.8181H29.091V37.6363C27.5455 35.2727 24.9092 33.7272 21.9092 33.7272H20.9092C20.5455 33.7272 20.1819 34 20.1819 34.4545V35.4545C20.1819 40.1818 24.0001 44 28.7274 44H29.0001V50.3636C22.9092 50.4545 16.8183 51.5454 10.7274 53.6363V49.7272H11.0001C15.7274 49.7272 19.5455 45.909 19.5455 41.1818V40.1818C19.5455 39.8181 19.2728 39.4545 18.8183 39.4545H17.8183C14.8183 39.4545 12.1819 41 10.6365 43.3636V39.5454H10.9092C15.6365 39.5454 19.4546 35.7272 19.4546 31V30C19.4546 29.6363 19.1819 29.2727 18.7274 29.2727H17.7274C14.7274 29.2727 12.091 30.8181 10.5455 33.1818V29.3636H10.8183C15.5455 29.3636 19.3637 25.5454 19.3637 20.8181V19.8181C19.3637 19.4545 19.091 19.0909 18.6365 19.0909H17.6365C14.6365 19.0909 12.0001 20.6363 10.4546 23V20.0909L10.9092 19.6363C14.2728 16.3636 14.2728 10.909 10.9092 7.63632V6.90905C10.6365 6.63632 10.1819 6.63632 9.90918 6.90905L9.18191 7.63632C7.54554 9.27268 6.72736 11.3636 6.72736 13.6363C6.72736 15.909 7.63645 18 9.18191 19.6363L9.63645 20.0909V23C8.091 20.6363 5.45463 19.0909 2.45463 19.0909H1.63645C1.27282 19.0909 0.90918 19.3636 0.90918 19.8181V20.909C0.90918 25.6363 4.72736 29.4545 9.45463 29.4545H9.72736V33.2727C8.18191 30.909 5.54554 29.3636 2.54554 29.3636H1.63645C1.18191 29.2727 0.90918 29.5454 0.90918 30V30.909C0.90918 35.6363 4.72736 39.4545 9.45463 39.4545H9.72736V43.2727C8.18191 40.909 5.54554 39.3636 2.54554 39.3636H1.63645C1.27282 39.3636 0.90918 39.6363 0.90918 40.0909V41.0909C0.90918 45.8181 4.72736 49.6363 9.45463 49.6363H9.72736V54C6.90918 55.0909 4.091 56.3636 1.27282 57.909C0.90918 58.0909 0.818271 58.5454 1.00009 58.8181C1.18191 59.1818 1.63645 59.2727 1.90918 59.0909C20.3637 49 39.1819 49 58.091 59.0909H58.4546C58.7274 59.0909 58.9092 59 59.091 58.7272C59.2728 58.3636 59.1819 58 58.8183 57.8181C56.0001 56.2727 53.1819 55 50.3637 54V49.5454H50.6365C55.3637 49.5454 59.1819 45.7272 59.1819 41V40C59.1819 39.6363 58.9092 39.2727 58.4546 39.2727H57.4546C54.4546 39.2727 51.8183 40.8181 50.2728 43.1818V39.3636H50.5455C55.2728 39.3636 59.091 35.5454 59.091 30.8181V30C59.091 29.6363 58.8183 29.2727 58.3637 29.2727H57.3637C54.3637 29.2727 51.7274 30.8181 50.1819 33.1818V29.3636H50.5455Z"
+                                        fill="white" class="group-hover:fill-[#AB7A18] duration-200" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_40_44052">
+                                        <rect width="60" height="60" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+
+                        </div>
+                        <h3
+                            class="text-[22px] text-white font-semibold PlayfairDisplay group-hover:text-[#AB7A18] duration-200">
+                            Organic Farm Important</h3>
+                        <p class="text-[#7F7F7F] text-xl leading-relaxed Outfit">
+                            Agriculture Was The Key Development In The Rise Of Sedentary Human Civilization, Whereby
+                            Farming
+                            Domesticated
+                            Species.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- footer  -->
+    <footer style="background-image: url('/images/Group\ 1116601395\ \(1\).png');"
+        class="w-full h-full object-cover text-white pt-16 pb-6">
+        <div class="container mx-auto px-6">
+            <div
+                class="md:flex 2xl:flex-nowrap xl:flex-nowrap lg:flex-nowrap flex-wrap  2xl:gap-40 xl:gap-20 lg:gap-14 md:gap-0 ">
+
+                <!-- Company Info -->
+                <div
+                    class="2xl:w-4/12 xl:w-4/12 lg:w-4/12 md:w-5/12 text-center 2xl:text-start xl:text-start lg:text-start md:text-start">
+                    <div class="space-y-6">
+                        <a href="/" class="w-52 2xl:ml-0 xl:ml-0 lg:ml-0 md:ml-0 mx-auto">
+                            <img src="/images/image 1.png" alt="">
+                        </a>
+                        <p class="text-[#7F7F7F] text-[18px] Outfit">
+                            Arvish Global is one of the fasting growing Indian based registered company for export of
+                            all
+                            kinds of Agricultural products.
+                        </p>
+                        <div class="space-y-4">
+                            <h4
+                                class="text-[#AB7A18] text-[22px] font-semibold hidden 2xl:block xl:block lg:block PlayfairDisplay">
+                                Follow Us</h4>
+                            <div
+                                class="flex gap-3 justify-center 2xl:justify-start xl:justify-start lg:justify-start md:justify-start">
+                                <a href="#" class="text-white group transition-colors">
+                                    <div
+                                        class="2xl:w-[35px] xl:w-[35px]  lg:w-[35px] md:w-[35px]   w-[33px] h-[33px] md:h-[35px]  rounded-full bg-[#AB7A18] flex items-center justify-center z-10 group-hover:bg-[#FFFFFF] duration-300">
+                                        <span class=""><i
+                                                class="fa-brands fa-facebook-f text-[#FFFFFF] group-hover:text-[#AB7A18] duration-300"></i>
+                                        </span>
+                                    </div>
+                                </a>
+                                <a href="#" class="text-white group transition-colors">
+                                    <div
+                                        class="2xl:w-[35px] xl:w-[35px]  lg:w-[35px] md:w-[35px]   w-[33px] h-[33px] md:h-[35px]  rounded-full bg-[#AB7A18] flex items-center justify-center z-10  group-hover:bg-[#FFFFFF] duration-300">
+                                        <span class="">
+                                            <i
+                                                class="fa-brands fa-instagram  text-[#FFFFFF] group-hover:text-[#AB7A18] duration-300"></i>
+                                        </span>
+                                    </div>
+                                </a>
+                                <a href="#" class="text-white group transition-colors">
+                                    <div
+                                        class="2xl:w-[35px] xl:w-[35px]  lg:w-[35px] md:w-[35px]   w-[33px] h-[33px] md:h-[35px]  rounded-full bg-[#AB7A18] flex items-center justify-center z-10  group-hover:bg-[#FFFFFF] duration-300">
+                                        <span class=""><i
+                                                class="fa-brands fa-twitter text-[#FFFFFF] group-hover:text-[#AB7A18] duration-300"></i>
+                                        </span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- // mobile  -->
+                <div class="flex gap-32 block sm-hidden 2xl:hidden xl:hidden lg:hidden md:hidden mt-6">
+                    <!-- Quick Links -->
+                    <div class="w-5/12">
+                        <div>
+                            <h4 class="text-[#FFB800] font-semibold mb-6 text-[22px] PlayfairDisplay">Quick Link</h4>
+                            <ul class="space-y-3">
+                                <li><a href="../index.html"
+                                        class="text-[#7F7F7F] Outfit hover:text-white transition-colors text-[18px]">Home</a>
+                                </li>
+                                <li><a href="../pages/aboutUs.html"
+                                        class="text-[#7F7F7F] Outfit hover:text-white transition-colors text-[18px]">About
+                                        Us</a></li>
+                                <li><a href="../pages/Gallery.html"
+                                        class="text-[#7F7F7F] Outfit hover:text-white transition-colors text-[18px]">Gallery</a>
+                                </li>
+                                <li><a href="../pages/products.html"
+                                        class="text-[#7F7F7F] Outfit hover:text-white transition-colors text-[18px]">Products</a>
+                                </li>
+                                <li><a href="../pages/blog.html"
+                                        class="text-[#7F7F7F] Outfit hover:text-white transition-colors text-[18px]">Blog</a>
+                                </li>
+                                <li><a href="../pages/contactUs.html"
+                                        class="text-[#7F7F7F] Outfit hover:text-white transition-colors text-[18px]">Contact
+                                        Us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Services -->
+                    <div class="W-2/12">
+                        <div>
+                            <h4 class="text-[#FFB800] font-semibold mb-6 text-[22px] PlayfairDisplay">Services</h4>
+                            <ul class="space-y-3">
+                                <li><a href="#"
+                                        class="text-gray-400 hover:text-white transition-colors text-[18px]">Rice</a>
+                                </li>
+                                <li><a href="#" class="text-gray-400 hover:text-white transition-colors text-[18px]">Dry
+                                        red Chili</a></li>
+                                <li><a href="#"
+                                        class="text-gray-400 hover:text-white transition-colors text-[18px]">Pulses</a>
+                                </li>
+                                <li><a href="#"
+                                        class="text-gray-400 hover:text-white transition-colors text-[18px]">Grain</a>
+                                </li>
+                                <li><a href="#"
+                                        class="text-gray-400 hover:text-white transition-colors text-[18px]">Spices</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="2xl:w-2/12 xl:w-2/12 lg:w-2/12 md:w-2/12 sm:block hidden 2xl:ml-0 xl:ml-0 lg:ml-0 md:ml-14">
+                    <div>
+                        <h4 class="text-[#AB7A18] font-semibold mb-6 text-[22px] PlayfairDisplay">Quick Link</h4>
+                        <ul class="space-y-3">
+                            <li><a href="../index.html"
+                                    class="text-[#7F7F7F] Outfit hover:text-white transition-colors text-[18px]">Home</a>
+                            </li>
+                            <li><a href="../pages/aboutUs.html"
+                                    class="text-[#7F7F7F] Outfit hover:text-white transition-colors text-[18px]">About
+                                    Us</a></li>
+                            <li><a href="../pages/Gallery.html"
+                                    class="text-[#7F7F7F] Outfit hover:text-white transition-colors text-[18px]">Gallery</a>
+                            </li>
+                            <li><a href="../pages/products.html"
+                                    class="text-[#7F7F7F] Outfit hover:text-white transition-colors text-[18px]">Products</a>
+                            </li>
+                            <li><a href="../pages/blog.html"
+                                    class="text-[#7F7F7F] Outfit hover:text-white transition-colors text-[18px]">Blog</a>
+                            </li>
+                            <li><a href="../pages/contactUs.html"
+                                    class="text-[#7F7F7F] Outfit hover:text-white transition-colors text-[18px]">Contact
+                                    Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Services -->
+                <div
+                    class="2xl:w-2/12 xl:w-2/12 lg:w-2/12 md:w-2/12 sm:block hidden 2xl:mt-0 xl:mt-0 lg:mt-0 2xl:ml-0 xl:ml-0 lg:ml-0 md:ml-28">
+                    <div>
+                        <h4 class="text-[#AB7A18] font-semibold mb-6 text-[22px] PlayfairDisplay">Services</h4>
+                        <ul class="space-y-3">
+                            <li><a href="#"
+                                    class="text-[#7F7F7F] hover:text-white transition-colors text-[18px]">Rice</a></li>
+                            <li><a href="#" class="text-[#7F7F7F] hover:text-white transition-colors text-[18px]">Dry
+                                    red Chili</a></li>
+                            <li><a href="#"
+                                    class="text-[#7F7F7F] hover:text-white transition-colors text-[18px]">Pulses</a>
+                            </li>
+                            <li><a href="#"
+                                    class="text-[#7F7F7F] hover:text-white transition-colors text-[18px]">Grain</a></li>
+                            <li><a href="#"
+                                    class="text-[#7F7F7F] hover:text-white transition-colors text-[18px]">Spices</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="2xl:w-4/12 xl:w-4/12 lg:w-4/12 md:w-12/12 2xl:mt-0 xl:mt-0 lg:mt-0 md:mt-0">
+                    <div class="mt-6 2xl:mt-0 xl:mt-0 lg:mt-0 md:mt-0">
+                        <h4 class="text-[#AB7A18] font-semibold mb-6 text-[22px] PlayfairDisplay">Contact Us</h4>
+                        <ul class="space-y-4">
+                            <li class="flex items-start gap-3 group">
+                                <div
+                                    class="2xl:w-[85px] xl:w-[85px]  lg:w-[110px] md:w-[35px]   w-[73px] h-[33px] md:h-[35px]  rounded-full bg-[#AB7A18] flex items-center justify-center z-10  group-hover:bg-[#FFFFFF] duration-300">
+                                    <span class=""><i
+                                            class="fa-solid fa-location-dot text-[#FFFFFF] group-hover:text-[#AB7A18] duration-300"></i>
+                                    </span>
+                                </div>
+                                <span class="text-[#7F7F7F] text-[18px]">A-508, Swastik Universal Buiding, Near
+                                    Valentine Cinema Roard,
+                                    Surat Gujrat India-395007</span>
+                            </li>
+                            <li class="flex items-center gap-3 group">
+                                <div
+                                    class="md:w-[35px] w-[33px] h-[33px] md:h-[35px] rounded-full bg-[#AB7A18] flex items-center justify-center z-10 group-hover:bg-[#FFFFFF] duration-300">
+                                    <span class=""><i
+                                            class="fa-solid fa-envelope text-[#FFFFFF] group-hover:text-[#AB7A18] duration-300"></i>
+                                    </span>
+                                </div>
+                                <a href="mailto:Export@swishglobal.com"
+                                    class="text-[#7F7F7F] text-[18px] hover:text-white transition-colors">Export@swishglobal.com</a>
+                            </li>
+                            <li class="flex items-center gap-3 group">
+                                <div
+                                    class="md:w-[35px] w-[33px] h-[33px] md:h-[35px]  rounded-full bg-[#AB7A18] flex items-center justify-center z-10 group-hover:bg-[#FFFFFF] duration-300">
+                                    <span class=""><i
+                                            class="fa-solid fa-phone text-[#FFFFFF] group-hover:text-[#AB7A18] duration-300"></i></span>
+                                </div>
+                                <span class="text-[#7F7F7F] text-[18px]">+918780156457</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+        </div>
+        <div class="border-t border-gray-800 mt-12 pt-6">
+            <p class="text-center text-gray-400 text-sm">
+                Copyright © 2022 Arvish Global All Rights Reserved.
+            </p>
+        </div>
+    </footer>
+
+
+    <script src="/js/jquery-3.7.1.min.js" type="text/javascript"></script>
+
+     <!-- responsive header js  -->
+     <script src="../js/header.js"></script>
+
+</body>
+
+</html>

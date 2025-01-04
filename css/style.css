@@ -1,0 +1,127 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: jost;
+    margin: 0;
+    padding: 0;
+}
+
+.overlay {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgba(8, 8, 8, 0.750);
+    top: 0;
+    z-index: -1;
+}
+
+.group1000005520_border {
+    backdrop-filter: blur(1px);
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(44deg, #b98a34, #b98a3400, #b98a3400, #b98a34);
+        background-clip: border-box;
+        mask:
+            linear-gradiant(#fff 0 0) padding-box,
+            linear-gradiant(#fff 0 0);
+        mask-composite: exclude !important;
+        z-index: -10;
+        border-radius: 5px;
+        border: 2px solid transparent;
+    }
+}
+
+a {
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+}
+
+ul {
+    margin: 0;
+    margin-inline: unset !important;
+    padding: 0;
+    list-style: none;
+}
+
+input {
+    background-color: transparent;
+    width: 100%;
+}
+
+.playfair-display {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.outfit {
+    font-family: "Outfit", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.jost {
+    font-family: "Jost", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.heading {
+    font-size: 72px;
+    background: -webkit-linear-gradient(#fc7c1b, #0f6f25);
+    
+    -webkit-text-fill-color: transparent;
+    opacity: 0.5;
+}
+
+button:hover {
+    background-color: #fc7c1b;
+    border: solid 1px white;
+    color: white;
+    transition: all 0.5s;
+}
+
+.glass-card {
+    background: rgba(25, 25, 25, 0.5);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Custom scrollbar styles */
+.custom-scrollbar::-webkit-scrollbar {
+    height: 8px;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: #1a1a1a; /* Track color */
+    border-radius: 10px; /* Rounded track */
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #FFB800; /* Scrollbar color */
+    border-radius: 10px; /* Rounded thumb */
+    border: 2px solid #1a1a1a;
+    /* Padding around scrollbar */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background-color: #E5A700;
+    /* Hover color */
+}
+
+
+.PlayfairDisplay{
+    font-family: 'Playfair Display';
+}
+.Outfit{
+    font-family: 'Outfit';
+}
