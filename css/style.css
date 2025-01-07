@@ -135,4 +135,13 @@ button:hover {
     .margin-top{
         margin-top: 85px;
     }
+    .tops{
+        margin-top: 10px !important;
+    }
+}
+
+@media (min-width:350px) and (max-width:400px){
+    .tops-1{
+        margin-top: 25px !important;
+    }
 }
