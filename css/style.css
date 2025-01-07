@@ -125,3 +125,14 @@ button:hover {
 .Outfit{
     font-family: 'Outfit';
 }
+.custom-bg {
+    background-image: url('/images/footer-img.png');
+  }
+
+
+  @media (min-width:100px) and (max-width:320px){
+    /* lg  */
+    .margin-top{
+        margin-top: 85px;
+    }
+}
